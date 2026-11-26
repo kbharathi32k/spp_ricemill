@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:spp_ricemill/User/loadInput.dart';
+import 'package:spp_ricemill/loadDisplay.dart';
+import 'package:spp_ricemill/sample.dart';
 import 'package:spp_ricemill/widgets/customContainer.dart';
-import 'package:spp_ricemill/noOfLoad.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(), // Ithu than mukkiyam ma - thani page aakitom ma
+      home: LoadInput(), // Ithu than mukkiyam ma - thani page aakitom ma
     );
   }
 }
@@ -49,7 +51,7 @@ class HomePage extends StatelessWidget {
                 print("Clicked!");
                 Navigator.push(
                   context, // Ippo intha context ku keezha Navigator irukku ma!
-                  MaterialPageRoute(builder: (context) => const NoOfLoad()),
+                  MaterialPageRoute(builder: (context) => LoadDisplay()),
                 );
               },
             ),
